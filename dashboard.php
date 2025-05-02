@@ -9,19 +9,17 @@
     <style>
       .nav-icon {
           display: flex;
-          align-items: center; /* Align icons vertically */
+          align-items: center; 
       }
       .nav-item {
-          /* Adjusts spacing between items */
-          margin-right: 15px; /* Adjusts space between icons */
+          margin-right: 15px; 
       }
       .nav-item:last-child {
-          margin-right: 0; /* Removes margin for the last item */
+          margin-right: 0; 
       }
-      /* Optional: Makes the SVG icons larger for better visibility */
       .nav-icon svg {
-          width: 24px; /* Increased size */
-          height: 24px; /* Increased size */
+          width: 24px;
+          height: 24px;
       }
       .card {
         background-color: #3D4EB0;
@@ -37,7 +35,7 @@
       <div class="container-fluid">
           <a class="navbar-brand">Hello, Username</a>
           <ul class="nav justify-content-end">
-              <li class="nav-item me-3"> <!-- Added margin-end for spacing -->
+              <li class="nav-item me-3"> 
                   <a href="#" class="nav-icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
                           <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
@@ -120,6 +118,27 @@
             </div>
           </div>
     </center>
+<br>
+
+    <footer>
+    <div class="card mb-3" style="width: 100%;">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <div class="card-body">
+          <h5 class="card-title">Lokasi Kami</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.0505030558993!2d106.77330607439296!3d-6.115613759971877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1da1ed8d96e7%3A0x69b061ee15df6c8d!2sBos%20Laundry%20%26%20Dry%20Clean!5e1!3m2!1sid!2sid!4v1746168114750!5m2!1sid!2sid" width="100%" height="550" style="border:0; padding: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h5 class="card-title">BOS Laundry & Dry Clean</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
 
     <nav class="navbar fixed-bottom" style="background-color: #3D4EB0">
       <a href="#" class="navbar-brand" style="color: #FFFFFF">

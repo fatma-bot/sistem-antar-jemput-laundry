@@ -11,6 +11,7 @@
     <center>
         <h4>LOGIN</h4>
         <p>Silahkan masukkan data diri anda</p>
+        <form method="POST" action="login_proses.php">
         <div class="input-group mb-3" style="width: 50%;">
             <span class="input-group-text">@</span>
             <div class="form-floating">
@@ -25,7 +26,8 @@
               <label for="floatingInputGroup1">Password</label>
             </div>
           </div>
-        <button type="submit" style="width: 30%; border-radius: 8px;"><a href="dashboard.php" style="text-decoration: none; color: white;">LOGIN</a></button>
+        <button type="submit" style="width: 30%; border-radius: 8px;">LOGIN</button>
+        </form>
         <p>Belum punya akun? <a href="registrasi.php">Daftar</a></p>
     </center>
 </body>
