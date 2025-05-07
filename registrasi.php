@@ -19,6 +19,7 @@ if(isset($_POST["submit"])) {
     $nomor_hp = $_POST["nomor_hp"];
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $alamat = $_POST['alamat'];
     $latitude = $_POST["latitude"];
     $longitude = $_POST["longitude"];
 
@@ -28,14 +29,14 @@ if(isset($_POST["submit"])) {
         $sql_get2 = mysqli_query($connect, "SELECT * FROM tb_akun WHERE username = '$username'");
         $num_row2 = mysqli_num_rows($sql_get2);
         if($num_row2 == 0) {
-            $query = "INSERT INTO tb_akun VALUES ('', '$nomor_hp', '$username', '$password', '$latitude', '$longitude')";
+            $query = "INSERT INTO tb_akun VALUES ('', '$nomor_hp', '$username', '$password', '$alamat', '$latitude', '$longitude')";
             mysqli_query($connect, $query);
 
             echo 
             "
             <script>
             alert('Registrasi berhasil');
-            document.location.href = 'otp.php';
+            document.location.href = 'lokasi.php';
             </script>
             "
             ;
@@ -99,6 +100,13 @@ if(isset($_POST["submit"])) {
             <div class="form-floating">
                 <input type="password" class="form-control" id="floatingInputGroup1" placeholder="password" name="password" required value="">
                 <label for="floatingInputGroup1">password</label>
+            </div>
+        </div>
+        <div class="input-group mb-3" style="width: 50%;">
+            <span class="input-group-text"><img src="https://static.vecteezy.com/system/resources/previews/005/005/788/original/user-icon-in-trendy-flat-style-isolated-on-grey-background-user-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-free-vector.jpg" style="width: 20px; height: 20px;" alt=""> </span>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGroup1" placeholder="alamat" name="alamat" required value="">
+                <label for="floatingInputGroup1">alamat</label>
             </div>
         </div>
         <input type="hidden" name="latitude" value=""> 
