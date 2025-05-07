@@ -14,8 +14,22 @@ $cek = mysqli_num_rows($query);
 if($cek >0)  {
     $_SESSION['username'] = $username;
     $_SESSION['status'] = "login";
-    header("location: dashboard.php");
+    echo 
+    "
+    <script>
+    alert('Login berhasil');
+    document.location.href = 'dashboard.php';
+    </script>
+    "
+    ;
 } else {
-    header("location: login.php?pesan=gagal");
+    echo 
+    " 
+    <script>
+    alert('login gagal, periksa kembali username dan password anda');
+    </script>
+    "
+    ;
+    header("location:login.php?message=failed");
 }
 ?>

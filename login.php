@@ -5,10 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <center>
+    <?php 
+            if(isset($_GET['message'])) {
+                if($_GET['message'] == "failed") { ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%; height: 50%;">
+                        <?php echo "login gagal"; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="this.parentElement.style.display='none'"></button>
+                    </div>
+                <?php
+                }
+                else if($_GET['message'] == "belum_login") { ?>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%; height: 50%;">
+                        <?php echo "anda harus login terlebih dahulu"; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="this.parentElement.style.display='none'"></button>
+                    </div>
+                <?php
+                }
+                else if($_GET['message'] == "regist_sukses") { ?>
+                    <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%; height: 50%;">
+                        <?php echo "regist berhasil! silahkan login "; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="this.parentElement.style.display='none'"></button>
+                    </div>
+                    <?php
+                }
+                else if($_GET['message'] == "regist_gagal") { ?>
+                    <div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%; height: 50%;">
+                        <?php echo "regist gagal."; ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="this.parentElement.style.display='none'"></button>
+                    </div>
+                    <?php
+                }
+            }
+        ?>
+
+
         <h4>LOGIN</h4>
         <p>Silahkan masukkan data diri anda</p>
         <form method="POST" action="login_proses.php">
